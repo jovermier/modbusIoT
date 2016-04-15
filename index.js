@@ -1,7 +1,7 @@
 var app = require('express')();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
-var ModbusRTU = require("modbus-serial/index");
+var ModbusRTU = require("./modbus-serial/index");
 var client = new ModbusRTU();
 
 app.get('/', function(req, res){
